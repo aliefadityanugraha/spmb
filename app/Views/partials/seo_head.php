@@ -62,6 +62,8 @@ $isHomePage     = ($requestUri === '/' || $requestUri === '' || $requestUri === 
     <meta name="twitter:description" content="<?= htmlspecialchars($seoDescription) ?>">
     <meta name="twitter:image" content="<?= htmlspecialchars($seoImage) ?>">
 
+    <meta name="google-site-verification" content="b8eL23mPx5FvRPh6YvSP7DGfhEkc2Rofm2x2lhK1MBQ" />
+
     <!-- JSON-LD Structured Data: EducationalOrganization & WebSite -->
     <script type="application/ld+json">
     {

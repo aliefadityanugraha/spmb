@@ -27,7 +27,7 @@
     <header class="bg-white/95 border-b border-slate-200 sticky top-0 z-40 backdrop-blur shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3">
             <!-- Brand Identitas Sekolah (Logo Navbar pentab.png) -->
-            <a href="/" class="flex items-center gap-3 min-w-0">
+            <a href="/" class="flex items-center min-w-0">
                 <img src="/assets/img/pentab.png" alt="Logo SPMB SMAN 5 Taruna Brawijaya" class="h-10 sm:h-12 w-auto object-contain shrink-0">
                 <div class="hidden sm:block min-w-0 border-l border-slate-200 pl-3">
                     <span class="block text-xs sm:text-sm font-extrabold text-slate-900 truncate">SMAN 5 Taruna Brawijaya</span>
@@ -75,7 +75,7 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative overflow-hidden bg-gradient-to-b from-emerald-50/80 via-white to-slate-50 pt-8 pb-12 sm:py-16 lg:py-20 border-b border-slate-200/80">
+    <section class="relative overflow-hidden bg-gradient-to-b from-emerald-50/80 via-white to-slate-50 pt-8 pb-12 sm:py-8 lg:py-12 border-b border-slate-200/80">
         <!-- Dekorasi Latar -->
         <div class="absolute inset-0 pointer-events-none overflow-hidden">
             <div class="absolute -top-24 -right-24 w-80 sm:w-[420px] h-80 sm:h-[420px] rounded-full bg-emerald-400/15 blur-3xl"></div>
@@ -83,15 +83,27 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
 
-                <!-- Kolom Kiri: Headline & Tombol Aksi -->
-                <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
-                    <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/90 border border-emerald-200 text-emerald-800 text-xs font-bold">
+                <!-- Foto Utama Kepala Sekolah & Taruna Berprestasi (Di Atas pada Mobile, Kanan pada Desktop) -->
+                <div class="order-1 lg:order-2 lg:col-span-5 flex items-center justify-center">
+                    <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-full mx-auto">
+                        <img
+                            src="/assets/img/Smata-Jaya-Foto-Utama-2.png"
+                            alt="Kepala SMAN 5 Taruna Brawijaya Jawa Timur beserta Taruna-Taruni Berprestasi"
+                            fetchpriority="high"
+                            decoding="async"
+                            class="w-full h-auto object-contain drop-shadow-xl mx-auto"
+                        >
+                    </div>
+                </div>
+
+                <!-- Headline & Tombol Aksi (Di Bawah Foto pada Mobile, Kiri pada Desktop) -->
+                <div class="order-2 lg:order-1 lg:col-span-7 space-y-5 text-center lg:text-left">
+                    <!-- <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/90 border border-emerald-200 text-emerald-800 text-xs font-bold">
                         <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
                         <span>Seleksi Penerimaan Murid Baru (SPMB) 2027/2028</span>
-                        <span class="px-2 py-0.5 rounded-full bg-amber-400 text-slate-900 font-extrabold text-[11px]">Kuota 270 Taruna/Taruni</span>
-                    </div>
+                    </div> -->
 
                     <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                         Terwujudnya <span class="bg-gradient-to-r from-emerald-600 to-teal-700 bg-clip-text text-transparent">Kader Pemimpin Bangsa</span> yang Berakhlak Mulia, Cerdas, Unggul, &amp; Berintegritas
@@ -119,42 +131,6 @@
                             </a>
                         <?php endif; ?>
                     </div>
-
-                    <!-- Highlight Motto & Info Singkat -->
-                    <div class="pt-3 space-y-3">
-                        <div class="inline-block px-4 py-2 rounded-2xl bg-amber-50 border border-amber-200 text-left">
-                            <p class="text-xs font-extrabold uppercase tracking-wider text-amber-900">Widya Widigda Wiguna Yasa</p>
-                            <p class="text-[11px] font-medium text-amber-800">Pendidikan, yang Mencerdaskan, Bermanfaat, dan Mulia</p>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 max-w-xl mx-auto lg:mx-0 text-left">
-                            <div class="flex items-center gap-2 bg-white/80 border border-slate-200/80 rounded-xl px-3 py-2">
-                                <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-extrabold shrink-0">270</span>
-                                <span class="text-xs font-semibold text-slate-700">Kuota Taruna/Taruni</span>
-                            </div>
-                            <div class="flex items-center gap-2 bg-white/80 border border-slate-200/80 rounded-xl px-3 py-2">
-                                <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-extrabold shrink-0">&#10003;</span>
-                                <span class="text-xs font-semibold text-slate-700">Umum &amp; Beasiswa</span>
-                            </div>
-                            <div class="flex items-center gap-2 bg-white/80 border border-slate-200/80 rounded-xl px-3 py-2">
-                                <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-extrabold shrink-0">&#10003;</span>
-                                <span class="text-xs font-semibold text-slate-700">16 Nov &ndash; 26 Des 2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kolom Kanan: Foto Utama Kepala Sekolah & Taruna Berprestasi -->
-                <div class="lg:col-span-5 flex items-center justify-center">
-                    <div class="relative w-full max-w-md lg:max-w-full mx-auto">
-                        <img
-                            src="/assets/img/Smata-Jaya-Foto-Utama-2.png"
-                            alt="Kepala SMAN 5 Taruna Brawijaya Jawa Timur beserta Taruna-Taruni Berprestasi"
-                            fetchpriority="high"
-                            decoding="async"
-                            class="w-full h-auto object-contain drop-shadow-xl mx-auto"
-                        >
-                    </div>
                 </div>
 
             </div>
@@ -166,7 +142,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div class="space-y-2">
-                    <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600">Kualifikasi Calon Peserta</span>
                     <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900">Persyaratan SPMB 2027/2028</h2>
                     <p class="text-xs sm:text-sm text-slate-500 max-w-2xl">
                         Pastikan calon Taruna/Taruni memenuhi 5 persyaratan utama Seleksi Penerimaan Murid Baru SMAN 5 Taruna Brawijaya Jawa Timur berikut.
@@ -237,7 +212,6 @@
     <section id="jalur" class="py-12 sm:py-16 bg-slate-50 border-b border-slate-200/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
             <div class="text-center max-w-2xl mx-auto space-y-2">
-                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600">Pilihan Jalur Masuk</span>
                 <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900">Jalur Pendaftaran SPMB</h2>
                 <p class="text-xs sm:text-sm text-slate-500">
                     Pilih jalur seleksi yang sesuai dengan kualifikasi akademik maupun prestasi Anda.
@@ -253,7 +227,6 @@
                                 <span class="px-1.5 py-0.2 rounded bg-rose-600 text-white">1</span>
                                 <span>JALUR UMUM</span>
                             </span>
-                            <span class="text-xs font-bold text-slate-500">Seleksi Reguler</span>
                         </div>
                         <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900">Jalur Seleksi Reguler Calon Taruna</h3>
                         <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -287,7 +260,6 @@
                                 <span class="px-1.5 py-0.2 rounded bg-rose-600 text-white">2</span>
                                 <span>JALUR BEASISWA PRESTASI</span>
                             </span>
-                            <span class="text-xs font-bold text-emerald-700">Prestasi Akademik / Nonakademik</span>
                         </div>
                         <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900">Jalur Beasiswa Prestasi</h3>
                         <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -320,7 +292,6 @@
     <section id="jadwal" class="py-12 sm:py-16 bg-gradient-to-b from-emerald-900 via-emerald-800 to-teal-900 text-white border-b border-emerald-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
             <div class="text-center max-w-2xl mx-auto space-y-2">
-                <span class="text-xs font-extrabold uppercase tracking-widest text-amber-300">Timeline Resmi Seleksi</span>
                 <h2 class="text-xl sm:text-3xl font-extrabold text-white">Jadwal SPMB 2027/2028</h2>
                 <p class="text-xs sm:text-sm text-emerald-100">
                     Catat dan perhatikan setiap tanggal tahapan Seleksi Penerimaan Murid Baru SMAN 5 Taruna Brawijaya Jawa Timur.
@@ -425,7 +396,6 @@
     <section id="alur" class="py-12 sm:py-16 bg-white border-b border-slate-200/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div class="text-center max-w-3xl mx-auto space-y-2">
-                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600">Cara Pendaftaran Online</span>
                 <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900">Alur Pendaftaran &amp; Berkas yang Disiapkan</h2>
                 <p class="text-xs sm:text-sm text-slate-500">
                     Sistem pendaftaran dilakukan secara online penuh melalui portal Seleksi Penerimaan Murid Baru (SPMB) dan bisa diakses kapan pun di mana pun.
@@ -479,12 +449,8 @@
             <div id="berkas" class="pt-4 space-y-5">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-t border-slate-200 pt-8">
                     <div>
-                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600">Kelengkapan Administrasi</span>
                         <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900">Berkas yang Disiapkan untuk Pendaftaran Online</h3>
                     </div>
-                    <span class="inline-block self-start md:self-auto px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">
-                        Format File: JPG / JPEG / PNG (Maks. 5 MB per file)
-                    </span>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -532,7 +498,6 @@
     <section id="faq" class="py-12 sm:py-16 bg-slate-50 border-b border-slate-200/80">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div class="text-center space-y-2">
-                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600">Pusat Bantuan</span>
                 <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900">Pertanyaan yang Sering Diajukan (FAQ)</h2>
             </div>
 
@@ -599,7 +564,6 @@
                         <li><a href="/auth/login" class="hover:text-emerald-400 transition">Login Peserta &amp; Panitia</a></li>
                         <li><a href="#syarat" class="hover:text-emerald-400 transition">5 Persyaratan Utama SPMB 2027/2028</a></li>
                         <li><a href="#jadwal" class="hover:text-emerald-400 transition">Jadwal Seleksi Tahap I, II &amp; Pantukhir</a></li>
-                        <li><a href="/sitemap.xml" target="_blank" class="hover:text-emerald-400 transition">Peta Situs (XML Sitemap)</a></li>
                     </ul>
                 </div>
 
