@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spmb_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=spmb_db
+      - DB_USER=spmb_admin
+      - DB_PASS=SpMb2027Taruna!
+
+  db:
+    image: mysql:8.0
+    container_name: spmb_db
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=SpMb2027Root!
+      - MYSQL_DATABASE=spmb_db
+      - MYSQL_USER=spmb_admin
+      - MYSQL_PASSWORD=SpMb2027Taruna!
+    volumes:
+      - mysqldata:/var/lib/mysql
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+
+volumes:
+  mysqldata:

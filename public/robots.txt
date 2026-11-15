@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /auth/login
+Allow: /auth/register
+Allow: /assets/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /biodata
+Disallow: /berkas
+Disallow: /nilai
+Disallow: /cetak
+Disallow: /uploads/
+
+Sitemap: http://localhost:8080/sitemap.xml

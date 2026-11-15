@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Arahkan permintaan /sitemap.xml langsung ke SitemapController
+RewriteRule ^sitemap\.xml$ index.php?url=sitemap/index [QSA,L]
+
+# Jika yang diakses bukan file atau folder nyata, arahkan ke index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
